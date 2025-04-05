@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Welcome, {{ username }}!</h2>
+        
+        <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">Logout</a>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">Message Operations</div>
+        <div class="card-body">
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required>{{ message }}</textarea>
+                </div>
+                
+                <div class="btn-group mb-3" role="group">
+                    <button type="submit" name="action" value="sign" class="btn btn-primary">Sign Message</button>
+                    <button type="submit" name="action" value="tamper" class="btn btn-warning">Tamper Message</button>
+                    <button type="submit" name="action" value="verify" class="btn btn-success">Verify Signature</button>
+                </div>
+                
+                {% if signature %}
+                <div class="mb-3">
+                    <label for="signature" class="form-label">Signature</label>
+                    <input type="text" class="form-control" id="signature" name="signature" value="{{ signature }}" readonly>
+                </div>
+                {% endif %}
+            </form>
+            
+            {% if status %}
+            <div class="alert alert-info mt-3">
+                {{ status }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">How It Works</div>
+        <div class="card-body">
+            <ol>
+                <li>Enter a message and click "Sign Message" to generate a digital signature</li>
+                <li>Click "Tamper Message" to modify the message (for testing verification)</li>
+                <li>Click "Verify Signature" to check if the message hasn't been altered</li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
