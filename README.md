@@ -59,7 +59,5 @@ The server will start at https://localhost:5000
 
 ---
 
-## Link to run the code in collab:
 
-https://colab.research.google.com/drive/1dXqCrhJT0IM1cp8f40KoJUKNQkf65Z3I?usp=sharing
 
