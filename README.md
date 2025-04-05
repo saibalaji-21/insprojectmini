@@ -59,7 +59,7 @@ The server will start at https://localhost:5000
 
 ---
 
-[Watch the Demo](https://youtu.be/L3l6fcQ2NHM?feature=shared)]
+[Watch the Demo](https://youtu.be/L3l6fcQ2NHM?feature=shared)
 
 
 
