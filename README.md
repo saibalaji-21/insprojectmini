@@ -25,11 +25,41 @@ A secure web application implementing **AES-128-EAX encryption**, **DSA digital 
 - Python 3.10+
 - Pip package manager
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+```sh
+python --version
+```
 
-# Install dependencies
-pip install -r requirements.txt
+## 🔧 Installation and Setup
+**Step 1:** Clone the Repository
+
+```sh
+git clone <your-repo-url>
+cd <your-project-folder>
+```
+**Step 2:** Create and Activate a Virtual Environment
+For Windows:
+
+```sh
+python -m venv venv
+venv\Scripts\activate
+```
+For macOS/Linux:
+
+```sh
+python3 -m venv venv
+source venv/bin/activate
+```
+## 🎯 Running the Application
+Once the setup is complete, start the Flask application by running:
+
+```sh
+python app.py
+```
+The server will start at https://localhost:5000
+
+---
+
+## Link to run the code in collab:
+
+https://colab.research.google.com/drive/1dXqCrhJT0IM1cp8f40KoJUKNQkf65Z3I?usp=sharing
+
